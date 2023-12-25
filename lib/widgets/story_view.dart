@@ -190,7 +190,7 @@ class StoryItem {
                   requestHeaders: requestHeaders,
                 ),
                 Container(
-                  margin: EdgeInsets.only(bottom: 16),
+                  margin: EdgeInsets.only(top: 16),
                   padding: EdgeInsets.symmetric(horizontal: 24, vertical: 8),
                   child: Align(
                     alignment: Alignment.topLeft,
