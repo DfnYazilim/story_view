@@ -173,7 +173,6 @@ class StoryItem {
     bool roundedTop = true,
     bool roundedBottom = false,
     Duration? duration,
-    Function? captionFn,
   }) {
     return StoryItem(
       ClipRRect(
@@ -190,22 +189,14 @@ class StoryItem {
                   fit: imageFit,
                   requestHeaders: requestHeaders,
                 ),
-                GestureDetector(
-                  onTap: (){
-                    if(captionFn!=null){
-                      captionFn();
-                    }
-
-                  },
-                  child: Container(
-                    margin: EdgeInsets.only(top: 16),
-                    padding: EdgeInsets.symmetric(horizontal: 24, vertical: 8),
-                    child: Align(
-                      alignment: Alignment.topLeft,
-                      child: Container(
-                        child: caption == null ? SizedBox() : caption,
-                        width: double.infinity,
-                      ),
+                Container(
+                  margin: EdgeInsets.only(top: 16),
+                  padding: EdgeInsets.symmetric(horizontal: 24, vertical: 8),
+                  child: Align(
+                    alignment: Alignment.topLeft,
+                    child: Container(
+                      child: caption == null ? SizedBox() : caption,
+                      width: double.infinity,
                     ),
                   ),
                 ),
