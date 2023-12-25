@@ -189,13 +189,17 @@ class StoryItem {
                   fit: imageFit,
                   requestHeaders: requestHeaders,
                 ),
-                Positioned(
-                  top : 10,
-                  child : Container(
-                    child: caption == null ? SizedBox() : caption,
-                    width: double.infinity,
+                Container(
+                  margin: EdgeInsets.only(bottom: 16),
+                  padding: EdgeInsets.symmetric(horizontal: 24, vertical: 8),
+                  child: Align(
+                    alignment: Alignment.topLeft,
+                    child: Container(
+                      child: caption == null ? SizedBox() : caption,
+                      width: double.infinity,
+                    ),
                   ),
-                )
+                ),
               ],
             ),
           ),
